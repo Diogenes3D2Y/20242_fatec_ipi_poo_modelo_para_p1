@@ -16,7 +16,7 @@ public class Jogo {
             // Define a ação do personagem
             switch (acao) {
                 case 0:
-                    p1.cacar();
+                    p1.cacar();  //método corrigido
                     break;
                 case 1:
                     p1.comer();
