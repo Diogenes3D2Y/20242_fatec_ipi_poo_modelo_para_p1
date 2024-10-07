@@ -1,6 +1,5 @@
 
 public class Personagem{
-  
     String nome;
     private int energia;
     private int fome;

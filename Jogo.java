@@ -14,9 +14,9 @@ public class Jogo {
             int acao = random.nextInt(3);
 
             // Define a ação do personagem
-            switch (acao) {
+            switch (acao) { 
                 case 0:
-                    p1.cacar();  //método corrigido
+                    p1.cacar();  //método corrigido dnv
                     break;
                 case 1:
                     p1.comer();
