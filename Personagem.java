@@ -1,9 +1,9 @@
 
 public class Personagem{
     String nome;
-    private int energia;
+     int energia;
     private int fome;
-    private int sono;
+    private int sono;  
   
     Personagem(){
       System.out.println("Construindo novo personagem");
@@ -57,6 +57,13 @@ public class Personagem{
         System.out.println(nome + " sem sono");
       }
     }
+    //Método morrer
+    void morrer(Personagem outroPersonagem) {
+      if (energia <= 0) {
+          System.out.printf("%s morreu\n", nome);
+          energia = 0;
+      }
+   }
   
     public String toString(){
       //nome: e:5, f:4, s:8
