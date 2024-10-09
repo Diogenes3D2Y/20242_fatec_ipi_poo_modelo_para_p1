@@ -2,8 +2,8 @@
 public class Personagem{
     String nome;
      int energia;
-    private int fome;
-    private int sono;  
+     private int fome;
+     private int sono;  
   
     Personagem(){
       System.out.println("Construindo novo personagem");
