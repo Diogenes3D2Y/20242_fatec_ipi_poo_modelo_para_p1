@@ -23,16 +23,15 @@ public class Personagem{
     void cacar(){
       if(energia >= 2){
         System.out.printf("%s caçando\n", nome);
-        energia -= 2; // energia = energia - 2
+        energia -= 2; 
       }else{
         System.out.printf(
           "%s sem energia para caçar\n",
           nome
         );
       }
-      // fome +=1 fome++ ++fome
+
       if (fome < 10) fome = fome + 1; 
-      // sono = sono + 1 > 10 ? sono : sono + 1;
       sono = sono == 10 ? sono : sono + 1;
     }
   
@@ -64,12 +63,22 @@ public class Personagem{
           energia = 0;
       }
    }
-   
+   //Método atacar
+   void atacar(Personagem alvo) {
+    if (energia > 0 && alvo.energia > 0) {
+        System.out.printf("%s atacou %s\n", nome, alvo.nome);
+        alvo.energia-=1;
+    }
+    else if( alvo.energia <= 0){
+      System.out.printf("Este personagem já está morto\n");
+      System.out.printf("%s é o campeão\n", nome);
+    }
+    else {
+      System.out.printf("O personagem está morto, não pode atacar\n");
+    }
     
- 
-
-
-  
+ }
+    
     public String toString(){
       //nome: e:5, f:4, s:8
       return String.format(
