@@ -64,6 +64,11 @@ public class Personagem{
           energia = 0;
       }
    }
+   
+    
+ 
+
+
   
     public String toString(){
       //nome: e:5, f:4, s:8

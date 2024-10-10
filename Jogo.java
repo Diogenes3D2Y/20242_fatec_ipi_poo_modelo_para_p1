@@ -13,7 +13,8 @@ public class Jogo {
         p1.energia = Math.max(p1.energia, 0);
         p2.energia = Math.max(p2.energia, 0);
 
-        while (p1.energia > 0 || p2.energia > 0) {
+        // while (p1.energia > 0 || p2.energia > 0) 
+        while (true){
             if (p1.energia > 0){ 
             // Gera um número aleatório entre 0 e 2 (3 possibilidades)
             int acaop1 = random.nextInt(3);
@@ -29,10 +30,22 @@ public class Jogo {
                 case 2:
                     p1.dormir();
                     break;
+                // case 3:
+                //     p1.atacar(p2);
+
+                //     if(p2.energia <= 0){
+                //         System.out.printf("Batman usou Kryptonita\n");
+                //     }
+
+                //     System.out.println(p1);
+                //     System.out.println(p2);
             }
         
+         }
+         else {
             // Verifica se o personagem ainda está vivo
             p1.morrer(p1);
+            System.out.printf("Superman é o Campeão\n");
          }
         
             // Ações do Zé Preguiça (probabilidade 60% dormir, 30% comer, 10% caçar)
@@ -45,8 +58,14 @@ public class Jogo {
                 } else if (acaop2 ==10) { // 10% de chance de caçar
                     p2.cacar();
                 }
-                p2.morrer(p2);
             }
+            else {
+                p2.morrer(p2);
+                 System.out.printf("Batman é o Campeão\n");
+                 
+            }
+
+            
 
             // Exibe o status do personagem
             System.out.println(p1);
@@ -54,13 +73,13 @@ public class Jogo {
             // Exibe o separador
             System.out.println("******************************\n");
         
-            // Pausa o programa por 5 segundos
+            // Faz o programa "dormir" por 5 segundos
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {                              
                 e.printStackTrace();
             }
         }
-        System.out.println("Fim do jogo. Todos os personagens morreram.");
+        
     }
 }
